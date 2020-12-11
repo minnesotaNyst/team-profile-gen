@@ -1,1 +1,1 @@
-//this is where you will build the tempalte literal
+//this is where you will render the tempalte literal
