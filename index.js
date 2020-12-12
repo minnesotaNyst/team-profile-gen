@@ -33,17 +33,14 @@ function appMenu() {
 				},
 				//ask the user what the manager's id is
 				{
-					type: 'number',
+					type: 'input',
 					name: 'mId',
 					message: "What is the manager's ID #?",
-					/* Is there logic here that allows us to validate that it is a legitimate email address? */
-					/* Take a look at RegEx*/
-					validate: function (response) {
-						const valid = /^[1-9]\d*$/.test(response);
+					validate: answer => {
+						const valid = /^[1-9]\d*$/.test(answer);
 						if (valid) {
 							return true;
 						}
-						response = '';
 						return 'Please enter a valid ID number!';
 					}
 				},
@@ -71,9 +68,14 @@ function appMenu() {
 				{
 					type: 'input',
 					name: 'mOfficeNumber',
-					message: "What is the manager's office number?"
-					/* Is there logic here that allows us to validate that it is a legitimate email address? */
-					/* Take a look at RegEx*/
+					message: "What is the manager's office number?",
+					validate: answer => {
+						const valid = /^[1-9]\d*$/.test(answer);
+						if (valid) {
+							return true;
+						}
+						return 'Please enter a valid phone number!';
+					}
 				}
 			])
 			.then(answers => {
@@ -92,9 +94,9 @@ function appMenu() {
 
 				buildTeam();
 			});
-  }
-  
-  function buildTeam();
+	}
+
+	/*  function buildTeam(); */
 
 	createManager();
 }
