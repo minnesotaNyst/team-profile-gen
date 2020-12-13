@@ -121,7 +121,9 @@ function appMenu() {
 						createIntern();
 						break;
 					default:
-						buildTeam();
+						// buildTeam();
+						console.log(teamMembers);
+						break;
 				}
 			});
 	}
@@ -199,10 +201,10 @@ function appMenu() {
 				//invoke the selectTeam function in the event there are more team members to add
 				selectTeam();
 			});
-  }
-  
-  //WHEN I select the intern option... THEN I am prompted to enter the intern’s name, id, email, and school and I am taken back to the menu
-  function createIntern() {
+	}
+
+	//WHEN I select the intern option... THEN I am prompted to enter the intern’s name, id, email, and school and I am taken back to the menu
+	function createIntern() {
 		inquirer
 			.prompt([
 				//ask the user for the interns name
@@ -252,7 +254,7 @@ function appMenu() {
 				{
 					type: 'input',
 					name: 'iSchool',
-					message: "What school does your intern attend?",
+					message: 'What school does your intern attend?',
 					validate: response => {
 						if (response) {
 							return true;
@@ -261,16 +263,16 @@ function appMenu() {
 					}
 				}
 			])
-			//create a new Engineer object with the data that was collected from the prompts above
+			//create a new Intern object with the data that was collected from the prompts above
 			.then(responses => {
-				const engineer = new Engineer(
-					responses.eName,
-					responses.eId,
-					responses.eEmail,
-					responses.eGithub
+				const intern = new Intern(
+					responses.iName,
+					responses.iId,
+					responses.iEmail,
+					responses.iSchool
 				);
-				teamMembers.push(engineer);
-				idArray.push(responses.eId);
+				teamMembers.push(intern);
+				idArray.push(responses.iId);
 				//invoke the selectTeam function in the event there are more team members to add
 				selectTeam();
 			});
