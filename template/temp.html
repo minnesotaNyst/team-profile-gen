@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- materialize -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- use the icons from materialize -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>Meet My Team</title>
     </head>
 
@@ -30,32 +32,7 @@
         <section class="container">
             <section>
                 <div class="row">
-                    <!-- this is what needs to be used for the template literals -->
-                    <div class="col s6 m6">
-                        <div class="card small hoverable">
-                            <div class="card-title blue darken-3">
-                                <h3 class=" white-text">Employee Name</h3>
-                                <h4 class=" white-text">Employee Name</h4>
-                            </div>
-                            <div class="card-content">
-                                <div>ID:</div>
-                                <div>Email:<a href="mailto:john.doe@gmail.com"> john.doe@gmail.com</a></div>
-                                <!-- only managers will have an office number -->
-                                <div>Office Number:</div>
-                                <!-- only managers will have an office number -->
-                                <!-- only the intern will have the school information -->
-                                <div>School:</div>
-                                <!-- only the intern will have the school information -->
-                            </div>
-                            <!-- only engineers will have this section -->
-                            <div class="card-action">
-                                <a href="https://github.com/pass-in-username">GitHub</a>
-                            </div>
-                            <!-- only engineers will have this section -->
-                        </div>
-                    </div>
-                    <!-- this is what needs to be used for the template literals -->
-
+                    {{ team }}
                 </div>
             </section>
         </section>
