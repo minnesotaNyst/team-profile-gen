@@ -21,6 +21,7 @@ Watch Me: https://drive.google.com/file/d/1MkEgqYHLlpz5nU81XYHS4kWVqVWL_ei-/view
 - [Tests](#tests)
 - [Questions](#questions)
 - [About](#about)
+- [Screenshot](#screenshot)
 
 ## Usage
 
@@ -61,3 +62,7 @@ Thanks for looking at Readme Generator, my name is Jake Nystrom! If you would li
 ## About the Author
 
 Today, as a motivated and goal oriented individual I embrace challenges, strive to help others learn and develop, work collaboratively with teams, and push myself to further develop my current skill set with an expectation to succeed. I thrive in high paced environments where teams are setup for success.
+
+## Screenshot
+
+![deployed screenshot](./assets/images/html-sample-screenshot.png)
