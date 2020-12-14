@@ -1,13 +1,16 @@
 const Manager = require('../lib/Manager.js');
 
-//TODO: create continuity later
+let mName = 'Jack';
+let mId = 1234;
+let mMail = 'manager.email@gmail.com';
+let mNumber = 7018675309;
 
 test('creates the property for github', () => {
-    const manager = new Manager('Dick', 1234, 'biggreenmachine@gmail.com', 144141)
-    expect(manager.officeNumber).toEqual(expect.any(Number));
+	const manager = new Manager(mName, mId, mMail, mNumber);
+	expect(manager.officeNum).toEqual(expect.any(Number));
 });
 
 test('gets role of manager', () => {
-    const manager = new Manager('Manager')
-    expect(manager.getRole()).toBe('Manager');
-})
+	const manager = new Manager('Manager');
+	expect(manager.getRole()).toBe('Manager');
+});
